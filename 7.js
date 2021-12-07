@@ -38,11 +38,11 @@ const otroAlmacen = {
  */
 
 function iterate(obj) {
-    let res = [];
+    let res = [];// esto seria un arreglo en donde se guardaran los objetos
     for (let property in obj) {
       const child = obj[property];
       if (typeof child === 'object') {
-            res = [...iterate(child)]
+            res = [...iterate(child)]// los 3 puntos indica que se remplazara todo lo que este ahi dentro 
         }
       res.push(child);
     }
